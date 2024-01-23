@@ -28,34 +28,34 @@ import Four04 from "./Components/Pages/Four04/Four04";
 import Productpage from "./Components/Pages/Productpage/Productpage";
 
 function App() {
-	return (
-		<Router>
-			<div>
-				<Nav />
-				<Route path="/" exact component={Paragraph} />
-				<Route path="/" exact component={First} />
-				<Route path="/" exact component={Second} />
-				<Route path="/" exact component={Third} />
-				<Route path="/" exact component={Fourth} />
-				<Route path="/" exact component={Fifth} />
-				<Route path="/" exact component={Sixth} />
-				<Switch>
-					<Route path="/" exact component={Youtube} />
-					<Route path="/iphone" exact component={Iphone} />
-					<Route path="/ipad" exact component={Ipad} />
-					<Route path="/TV" exact component={TV} />
-					<Route path="/Watch" exact component={Watch} />
-					<Route path="/Music" exact component={Music} />
-					<Route path="/Support" exact component={Support} />
-					<Route path="/Cart" exact component={Cart} />
-					<Route path="/mac" exact component={Mac} />
-					<Route path="/iphone/:pid" exact component={Productpage} />
-					<Route path="/" component={Four04} />
-				</Switch>
-				<Footer />
-			</div>
-		</Router>
-	);
+  return (
+    <Router>
+      <div>
+        <Nav />
+        <Route path="/" exact component={Paragraph} />
+        <Route path="/" exact component={First} />
+        <Route path="/" exact component={Second} />
+        <Route path="/" exact component={Third} />
+        <Route path="/" exact component={Fourth} />
+        <Route path="/" exact component={Fifth} />
+        <Route path="/" exact component={Sixth} />
+        <Switch>
+          <Route path="/" exact component={Youtube} />
+          <Route path="/iphone" exact component={Iphone} />
+          <Route path="/ipad" exact component={Ipad} />
+          <Route path="/TV" exact component={TV} />
+          <Route path="/Watch" exact component={Watch} />
+          <Route path="/Music" exact component={Music} />
+          <Route path="/Support" exact component={Support} />
+          <Route path="/Cart" exact component={Cart} />
+          <Route path="/mac" exact component={Mac} />
+          <Route path="/iphone/:pid" exact component={Productpage} />
+          <Route path="*" component={Four04} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
